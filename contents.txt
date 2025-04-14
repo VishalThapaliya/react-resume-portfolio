@@ -1,0 +1,266 @@
+React Personal Portfolio
+
+# sidebar
+
+alt = Bishal Thapaliya
+Bishal Thapaliya
+Front-end developer
+
+Show Contacts
+
+Email
+vishal.thapaliya@gmail.com
+
+Phone
+(+33) 07 68 31 94 27
+
+Birthday
+September 19, 1985
+
+Location
+Grenoble, France
+
+# navbar
+
+About
+Resume
+Portfolio
+Blog
+Contact
+
+# about
+
+About me
+
+I'm Highly skilled Frontend Developer with over 5 years of experience in building responsive, highperformance web applications, including 2 years specializing in React.js. Passionate about new technologies, best practices, and UI/UX design, with a detail-oriented, curious, and problem-solving mindset. 
+Expertise in modern frontend technologies, agile teamwork, and delivering scalable, userfriendly solutions while continuously striving for improvement.
+
+
+## service
+
+What i'm doing
+
+alt = design icon
+Web design
+The most modern and high-quality design made at a professional level.
+
+alt = Web development icon
+Web development
+High-quality development of sites at the professional level.
+
+alt = mobile app icon
+Mobile apps
+Professional development of applications for iOS and Android.
+
+alt = camera icon
+Photography
+I make high-quality photos of any category at a professional level.
+
+
+## testimonials
+
+Testimonials
+
+alt = Anthony Birembaut
+Anthony Birembaut
+Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Pablo Alonso
+Pablo Alonso
+Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Nicolas Chabanoles
+Nicolas Chabanoles
+Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Bishal Thapaliya
+Bishal Thapaliya
+Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+
+## clients
+
+Clients
+
+alt = client logo
+
+
+
+# resume
+
+Resume
+
+Education
+
+ESIGELEC
+2015 — 2017
+Masters of Sciences & Techonology - Information Systems (MST-IS)
+
+Sikkim Manipal University
+2011 — 2013
+Masters in Computer Science (M.Sc. CS)
+
+Tribhuvan University
+2006 — 2009
+Bachelors in Business Studies (BBS)
+
+Experience
+
+R&D Engineer (Frontend Developer)
+April 2019 — Present
+Bonitasoft
+Grenoble, France
+
+Junior Frontend Developer
+September 2018 — February 2019
+Insiti
+Paris, France
+
+Junior Frontend Developer
+September 2018 — February 2019
+Optilian
+Paris, France
+
+Software License Management (Internship)
+December 2016 — May 2017
+Amadeus IT
+Erding, Germany
+
+My skills
+
+HTML
+80%
+CSS
+70%
+Javascript
+90%
+React.js
+50%
+Vue.js
+50%
+Tailwind CSS
+50%
+Bootstrap
+50%
+Cypress
+50%
+Jest
+50%
+React Testing Library
+50%
+WordPress
+50%
+Figma
+50%
+Photoshop
+50%
+Git/GitHub
+50%
+
+
+# portfolio
+
+Portfolio
+
+All
+Web design
+Applications
+Web development
+
+Select category
+All
+Web design
+Applications
+Web development
+
+alt = finance
+Finance
+Web development
+
+alt = orizon
+Orizon
+Web development
+
+alt = fundo
+Fundo
+Web design
+
+alt = brawlhalla
+Brawlhalla
+Applications
+
+alt = dsm.
+DSM.
+Web design
+
+alt = metaspark
+MetaSpark
+Web design
+
+alt = summary
+Summary
+Web development
+
+alt = task manager
+Task Manager
+Applications
+
+alt = arrival
+Arrival
+Web development
+
+
+
+# blog
+
+Blog
+
+alt = Custom clock widget
+Development
+Jun 09, 2021
+Build a custom clock widget in Bonita UI Designer
+some text for description
+
+alt = Custom search widget
+Development
+Oct 15, 2020
+Best fonts every designer
+Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+
+alt = Design digest #80
+Design
+Fab 23, 2022
+Design digest #80
+Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+
+alt = UI interactions of the week
+Design
+Fab 23, 2022
+UI interactions of the week
+Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+
+alt = The forgotten art of spacing
+Design
+Fab 23, 2022
+The Forgotten Art Of Spacing
+Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+alt = Design digest #79
+Design
+Fab 23, 2022
+Design Digest #79
+Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+
+
+
+# contact
+
+Contact
+
+Contact Form
+
+Full name
+Email address
+Your Message
+
+Send Message
