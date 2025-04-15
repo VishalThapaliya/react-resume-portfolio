@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './assets/components/Navbar'
 import Sidebar from './assets/components/Sidebar'
 
 function App() {
@@ -6,6 +7,10 @@ function App() {
     <>
       <main>
         <Sidebar />
+
+        <div className="main-content">
+          <Navbar />
+        </div>
       </main>
     </>
   )

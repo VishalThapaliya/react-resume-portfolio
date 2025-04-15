@@ -92,7 +92,7 @@ const Sidebar = () => {
 
                             <div className="contact-info">
                                 <p className="contact-title">{contact.title}</p>
-                                <span className="contact-link">{contact.link}</span>
+                                <span className="contact-link" title={contact.link}>{contact.link}</span>
                             </div>
                         </li>
                     ))}

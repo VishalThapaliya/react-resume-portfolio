@@ -286,7 +286,7 @@
         grid-template-columns: 1fr;
 
         .contact-info {
-          &:is(.contact-link) {
+          :is(.contact-link) {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
