@@ -507,12 +507,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 25px;
+    gap: 15px;
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    min-width: 65%;
+    width: 65%;
     margin: 0;
   }
 }
