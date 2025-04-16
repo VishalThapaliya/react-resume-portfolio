@@ -1,6 +1,7 @@
 import './App.css'
-import Navbar from './assets/components/Navbar'
-import Sidebar from './assets/components/Sidebar'
+import About from './components/About'
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
         <div className="main-content">
           <Navbar />
+          <About />
         </div>
       </main>
     </>
