@@ -27,6 +27,7 @@
     .avatar-box {
       background: var(--bg-gradient-onyx);
       border-radius: 20px;
+      overflow: hidden;
     }
 
     .info-content {
@@ -237,10 +238,6 @@
    */
 
 @media (min-width: 1250px) {
-  /**
-     * SIDEBAR
-     */
-
   .sidebar {
     position: sticky;
     top: 60px;
@@ -253,8 +250,10 @@
     .sidebar-info {
       flex-direction: column;
 
-      .avatar-box img {
-        width: 150px;
+      .avatar-box {        
+        img {
+          width: 150px;
+        }
       }
 
       .info-content {

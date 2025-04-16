@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import avatarImage from '../images/my-avatar.png'
+import avatarImage from '../assets/images/my-avatar2.png'
 import './Sidebar.css'
 
 const contactItems = [
@@ -65,7 +65,7 @@ const Sidebar = () => {
         <aside className={`sidebar ${isSidebarOpen ? 'active' : ''}`}>
             <div className="sidebar-info">
                 <figure className="avatar-box">
-                    <img src={avatarImage} alt="Bishal Avatar" style={{ width: 80 }}/>
+                    <img src={avatarImage} alt="Bishal Avatar" />
                 </figure>
 
                 <div className="info-content">
