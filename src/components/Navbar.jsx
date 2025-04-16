@@ -1,31 +1,32 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const navItems = [
     {
         id: 1,
         name: 'About',
-        className: 'navbar-link active'
+        linkTo: '/about'
     },
     {
         id: 2,
         name: 'Resume',
-        className: 'navbar-link'
+        linkTo: '/resume'
     },
     {
         id: 3,
         name: 'Portfolio',
-        className: 'navbar-link'
+        linkTo: '/portfolio'
     },
     {
         id: 4,
         name: 'Blog',
-        className: 'navbar-link'
+        linkTo: '/blog'
     },
     {
         id: 5,
         name: 'Contact',
-        className: 'navbar-link'
+        linkTo: '/contact'
     },
 ]
 
@@ -34,9 +35,14 @@ const Navbar = () => {
     <nav className="navbar">
         <ul className="navbar-list">
             {
-                navItems.map(item => (
+                navItems.map((item) => (
                     <li className="navbar-item" key={item.id}>
-                        <button className={item.className} data-nav-link>{item.name}</button>
+                        <NavLink 
+                            to={item.linkTo} 
+                            className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link' }
+                        >                     
+                            {item.name}                            
+                        </NavLink>
                     </li>
                 ))
             }
