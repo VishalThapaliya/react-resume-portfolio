@@ -1,6 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import './Navbar.css';
+import { NavLink } from 'react-router-dom'
+import './Navbar.css'
+import resume from '../assets/Resume.pdf'
 
 const navItems = [
     {
@@ -46,6 +47,18 @@ const Navbar = () => {
                     </li>
                 ))
             }
+
+            <li className="navbar-item">
+                <a 
+                    href={resume} 
+                    download={resume}
+                    className='navbar-link resume-download-btn'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Download Resume
+                </a>
+            </li>
         </ul>
     </nav>
   )

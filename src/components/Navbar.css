@@ -36,6 +36,22 @@
         color: var(--orange-yellow-crayola);
       }
     }
+
+    .resume-download-btn {
+      color: var(--light-gray);
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--vegas-gold);
+      border-radius: 30px;
+      padding: 10px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    
+    .resume-download-btn:hover {
+      color: var(--onyx);
+      background: var(--vegas-gold);
+    }
   }
 }
 
