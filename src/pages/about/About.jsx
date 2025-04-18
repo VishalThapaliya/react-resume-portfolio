@@ -12,15 +12,9 @@ import testimonialAvatar1 from '../../assets/images/avatar-1.png'
 import testimonialAvatar2 from '../../assets/images/avatar-2.png'
 import testimonialAvatar3 from '../../assets/images/avatar-3.png'
 import testimonialAvatar4 from '../../assets/images/avatar-4.png'
-import testimonialAvatar5 from '../../assets/images/my-avatar.png'
+import testimonialAvatar5 from '../../assets/images/avatar-02.png'
 
-// clients logos
-import clientLogo1 from '../../assets/images/logo-1-color.png'
-import clientLogo2 from '../../assets/images/logo-2-color.png'
-import clientLogo3 from '../../assets/images/logo-3-color.png'
-import clientLogo4 from '../../assets/images/logo-4-color.png'
-import clientLogo5 from '../../assets/images/logo-5-color.png'
-import clientLogo6 from '../../assets/images/logo-6-color.png'
+
 import Services from '../../components/Services'
 import Testimonials from '../../components/Testimonials'
 
@@ -63,13 +57,13 @@ const testimonials = [
     {
         id: 2,
         image: testimonialAvatar2,
-        name: 'Nathalie Cotte',
+        name: 'Nicolas Chabanoles',
         text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
         id: 3,
         image: testimonialAvatar3,
-        name: 'Nicolas Chabanoles',
+        name: 'Pablo Alonso',
         text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
@@ -81,41 +75,14 @@ const testimonials = [
     {
         id: 5,
         image: testimonialAvatar5,
-        name: 'Pablo Alonso',
+        name: 'Nathalie Cotte',
         text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
 ]
 
-const clients = [
-    {
-        id: 1,
-        icon: clientLogo1
-    },
-    {
-        id: 2,
-        icon: clientLogo2
-    },
-    {
-        id: 3,
-        icon: clientLogo3
-    },
-    {
-        id: 4,
-        icon: clientLogo4
-    },
-    {
-        id: 5,
-        icon: clientLogo5
-    },
-    {
-        id: 6,
-        icon: clientLogo6
-    }
-]
-
 const About = () => {
     return (
-        <article className="about active" data-page="about">
+        <article className="about active">
             <header>
                 <h2 className="h2 article-title">About Me</h2>
             </header>
@@ -138,24 +105,6 @@ const About = () => {
 
             {/* testimonial section */}
             <Testimonials testimonials={testimonials} />
-
-
-            {/* clients section */}
-
-            {/* <section className="clients">
-            <h3 className="h3 clients-title">Clients</h3>
-
-            <ul className="clients-list has-scrollbar">
-                { clients.map(client => (
-                   <li className="clients-item" key={client.id}>
-                        <a href="#">
-                            <img src={client.icon} alt="client logo" />
-                        </a>
-                   </li> 
-                )) }
-            </ul>
-        </section> */}
-
 
         </article>
     )
