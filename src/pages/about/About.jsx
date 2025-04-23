@@ -11,7 +11,7 @@ import cameraIcon from '../../assets/images/icon-photo.svg'
 import testimonialAvatar1 from '../../assets/images/avatar-1.png'
 import testimonialAvatar2 from '../../assets/images/avatar-2.png'
 import testimonialAvatar3 from '../../assets/images/avatar-3.png'
-import testimonialAvatar4 from '../../assets/images/avatar-4.png'
+import testimonialAvatar4 from '../../assets/images/avatar-5.png'
 import testimonialAvatar5 from '../../assets/images/avatar-02.png'
 
 
