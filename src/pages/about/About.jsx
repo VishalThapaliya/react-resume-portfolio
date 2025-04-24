@@ -11,8 +11,9 @@ import cameraIcon from '../../assets/images/icon-photo.svg'
 import testimonialAvatar1 from '../../assets/images/avatar-1.png'
 import testimonialAvatar2 from '../../assets/images/avatar-2.png'
 import testimonialAvatar3 from '../../assets/images/avatar-3.png'
-import testimonialAvatar4 from '../../assets/images/avatar-4.png'
-import testimonialAvatar5 from '../../assets/images/avatar-02.png'
+import testimonialAvatar4 from '../../assets/images/avatar-5.png'
+import testimonialAvatar5 from '../../assets/images/avatar-6.png'
+import testimonialAvatar6 from '../../assets/images/avatar-4.png'
 
 
 import Services from '../../components/Services'
@@ -52,32 +53,38 @@ const testimonials = [
         id: 1,
         image: testimonialAvatar1,
         name: 'Anthony Birembaut',
-        text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
         id: 2,
         image: testimonialAvatar2,
         name: 'Nicolas Chabanoles',
-        text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
         id: 3,
         image: testimonialAvatar3,
         name: 'Pablo Alonso',
-        text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
         id: 4,
         image: testimonialAvatar4,
         name: 'Julien Mege',
-        text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
     {
         id: 5,
         image: testimonialAvatar5,
-        name: 'Nathalie Cotte',
-        text: 'Bishal was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        name: 'Benjamin Parisel',
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
     },
+    {
+        id: 6,
+        image: testimonialAvatar6,
+        name: 'Thomas Buffard',
+        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+    }
 ]
 
 const About = () => {
