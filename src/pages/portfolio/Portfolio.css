@@ -164,8 +164,8 @@
 
  @media (min-width: 450px) {
   
-    .project-img,
-    .blog-banner-box { height: auto; }
+    /* .project-img,
+    .blog-banner-box { height: auto; } */
   
   }
 
