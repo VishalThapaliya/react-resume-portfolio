@@ -243,26 +243,3 @@
  @media (min-width: 1250px) {
 
  }
-
-
-
-
- .select-list {
-    position: absolute;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    list-style: none;
-    z-index: 999;
-    width: 100%;
-  }
-  .select-item button {
-    background: none;
-    border: none;
-    width: 100%;
-    padding: 0.5rem;
-    text-align: left;
-    cursor: pointer;
-  }
-  
-  
