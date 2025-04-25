@@ -56,7 +56,7 @@ const Navbar = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    Download Resume
+                    Download CV
                 </a>
             </li>
         </ul>
