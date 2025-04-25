@@ -27,7 +27,7 @@ const filterList = [
   { id: 'all', option: 'All' },
   { id: 'web-dev', option: 'Web development' },
   { id: 'web-design', option: 'Web design (UI/UX)' },
-  { id: 'apps', option: 'Applications' },
+  { id: 'apps', option: 'Application' },
 ];
 
 // Project Data
@@ -39,7 +39,7 @@ const projects = [
   { id: 5, image: bibilonImage, title: 'Bibilon', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=20-2&t=56A3CCn9lLbXn3St-1' },
   { id: 6, image: himalayanImage, title: 'Himalayan Restaurant', category: 'Web development', link: 'https://himalayan.fr/' },
   { id: 7, image: adminDashboardImage, title: 'Task Manager', category: 'Web development', link: 'https://vishalthapaliya.github.io/platform-management-dashboard/' },
-  { id: 8, image: bibiFlixImage, title: 'BibiFlix Movies', category: 'Web development', link: 'https://bibiflix-react-movie-app.vercel.app/' },
+  { id: 8, image: bibiFlixImage, title: 'BibiFlix Movies', category: 'Application', link: 'https://bibiflix-react-movie-app.vercel.app/' },
   { id: 9, image: oculusImage, title: 'Oculus', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=33-34&t=56A3CCn9lLbXn3St-1' },
   { id: 10, image: bibiProductsImage, title: 'Bibi Products', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=47-2&t=56A3CCn9lLbXn3St-1' },
   { id: 11, image: bibiFitImage, title: 'Bibifit', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=52-2&t=56A3CCn9lLbXn3St-1' },
