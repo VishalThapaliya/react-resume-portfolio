@@ -1,0 +1,31 @@
+footer {
+    position: fixed;
+    background: var(--eerie-black-2);
+    color: var(--light-gray-70);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-300);
+    border: 1px solid var(--jet);
+    width: 100vw;
+    bottom: 0;
+    padding: 15px;
+    box-shadow: var(--shadow-1);
+    z-index: 10;
+    display: none;
+}
+
+
+/*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+
+/**
+   * responsive larger than 1024px screen
+   */
+
+   @media (min-width: 1024px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   }

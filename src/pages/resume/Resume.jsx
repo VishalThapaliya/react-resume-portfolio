@@ -203,8 +203,8 @@ const Resume = () => {
               <h5 className="h5">{exp.company}</h5>
               <span>{exp.from} - {exp.to}</span>
               <ul className="timeline-description-list">
-                {exp.description.map((task) => (
-                  <li className="timeline-text" key={task.id}>{task}</li>
+                {exp.description.map((task, index) => (
+                  <li className="timeline-text" key={index}>{task}</li>
                 ))}
               </ul>
             </li>
