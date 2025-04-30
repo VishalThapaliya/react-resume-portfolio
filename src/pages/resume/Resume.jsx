@@ -92,14 +92,14 @@ const educations = [
     to: '2013',
     place: 'Kathmandu, Nepal'
   },
-  {
-    id: 3,
-    school: `Tribhuvan University (TU)`,
-    degree: 'Bachelors of Business Studies (BBS)',
-    from: '2006',
-    to: '2009',
-    place: 'Kathmandu, Nepal'
-  }
+  // {
+  //   id: 3,
+  //   school: `Tribhuvan University (TU)`,
+  //   degree: 'Bachelors of Business Studies (BBS)',
+  //   from: '2006',
+  //   to: '2009',
+  //   place: 'Kathmandu, Nepal'
+  // }
 ]
 
 const skills = [
