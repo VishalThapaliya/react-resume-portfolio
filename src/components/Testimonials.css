@@ -166,6 +166,12 @@
   margin-bottom: 4px;
 }
 
+.modal-subtitle {
+  color: var(--vegas-gold);
+  text-transform: capitalize;
+  margin-block-end: 10px;
+}
+
 .modal-content time {
   font-size: var(--fs-6);
   color: var(--light-gray-70);

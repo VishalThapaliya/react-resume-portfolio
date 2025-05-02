@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './Blog.css';
 
 // blog images
@@ -7,12 +7,13 @@ import searchImage from '../../assets/images/widgetSearch.webp'
 import typewriterImage from '../../assets/images/widgetTypewriter.gif'
 import clipPathImage from '../../assets/images/widgetClipPath.gif'
 import loginPageImage from '../../assets/images/widgetLoginPage.png'
+import carouselImage from '../../assets/images/image-carousel.gif'
 
 const blogs = [
   { id: 1, 
     link: 'https://dev.to/vishalthapaliya/build-a-custom-clock-widget-in-bonita-ui-designer-1617', 
     image: clockImage, 
-    category: 'Frontend, Custom widget', 
+    category: 'Frontend, Custom widget, Javascript', 
     publishedDate: 'Jun 9, 2021', 
     title: 'Build a Custom Clock Widget in Bonita UI Designer', 
     content: 'You’ll see how to create an analog clock widget, change the appearance of the widget when you drag and drop it onto the whiteboard in Bonita UI Designer, and how to add some CSS and JavaScript to make the clock widget functional to the end-users.'
@@ -51,10 +52,23 @@ const blogs = [
     publishedDate: 'May 22, 2020', 
     title: '12 simple steps to build a neumorphic login page with Bonita UI Designer', 
     content: 'The interface style known as neumorphic (a combination of skeumorphic and realistic design) has been gaining in popularity, and I think we\'ll see it being used more and more in 2020.'
+  },
+  { 
+    id: 6, 
+    link: 'https://dev.to/vishalthapaliya/build-a-smooth-performant-image-carousel-in-react-a-beginners-guide-48ji', 
+    image: carouselImage, 
+    category: 'Frontend, React, Javascript', 
+    publishedDate: 'May 01, 2025', 
+    title: 'Build a Smooth & Performant Image Carousel in React - A Beginner\'s Guide', 
+    content: 'If you’re learning React and want to create a clean, responsive, and performant image carousel, you’re in the right place! In this guide, we’ll walk through building a React image carousel with auto-sliding functionality, navigation buttons, and efficient state management.'
   }
 ]
 
 const Blog = () => {
+  const sortedBlogs = useMemo(() => {
+    return [...blogs].sort((a,b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+  }, []);
+
   return (
     <article className="blog active">
       <header>
@@ -64,9 +78,9 @@ const Blog = () => {
       <section className="blog-posts">
         <ul className="blog-posts-list">
           {
-            blogs.map((blog) => (
+            sortedBlogs.map((blog) => (
               <li className="blog-post-item" key={blog.id}>
-                <a href={blog.link} target='_blank'>
+                <a href={blog.link} target='_blank' rel='noopener noreferrer'>
                   <figure className="blog-banner-box">
                     <img src={blog.image} alt={blog.title} loading='lazy'/>
                   </figure>
@@ -89,8 +103,6 @@ const Blog = () => {
               </li>
             ))
           }
-          
-          
         </ul>
       </section>
 
