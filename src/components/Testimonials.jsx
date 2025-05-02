@@ -67,7 +67,7 @@ const Testimonials = ({ testimonials }) => {
 
                             <div className="modal-content">
                                 <h3 className="h3 modal-title">{selectedTestimonial.name}</h3>
-
+                                <span className='modal-subtitle'>{selectedTestimonial.position} - {selectedTestimonial.company}</span>
                                 <div>
                                     <p>{selectedTestimonial.text}</p>
                                 </div>

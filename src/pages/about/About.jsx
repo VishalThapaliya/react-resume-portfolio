@@ -53,37 +53,49 @@ const testimonials = [
         id: 1,
         image: testimonialAvatar1,
         name: 'Anthony Birembaut',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'Senior R&D Engineer',
+        company: 'Bonitasoft',
+        text: 'Bishal consistently delivers elegant, responsive, and user-centric UI solutions—his attention to detail and commitment to usability make him an outstanding front-end developer.'
     },
     {
         id: 2,
         image: testimonialAvatar2,
         name: 'Nicolas Chabanoles',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'CTO',
+        company: 'Bonitasoft',
+        text: 'Working with Bishal has been a pleasure; his expertise in crafting clean, intuitive interfaces and his collaborative spirit greatly enhance any development team.'
     },
     {
         id: 3,
         image: testimonialAvatar3,
         name: 'Pablo Alonso',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'Head of R&D',
+        company: 'Bonitasoft',
+        text: 'Bishal brings not only strong technical skills in front-end development but also a positive, cooperative attitude that makes teamwork seamless and enjoyable.'
     },
     {
         id: 4,
         image: testimonialAvatar4,
         name: 'Julien Mege',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'R&D Manager',
+        company: 'Bonitasoft',
+        text: 'Bishal is a rare blend of creative UI craftsmanship and dependable teamwork—his ability to quickly adapt and support others makes him a valuable asset on any project.'
     },
     {
         id: 5,
         image: testimonialAvatar5,
         name: 'Benjamin Parisel',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'Senior R&D Engineer',
+        company: 'Bonitasoft',
+        text: 'Whether it\'s responsive design or pixel-perfect execution, Bishal excels at building interfaces that look great and feel natural to use.'
     },
     {
         id: 6,
         image: testimonialAvatar6,
         name: 'Thomas Buffard',
-        text: 'Bishal is a great Frontend developer specilized in UI Development. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.'
+        position: 'Senior R&D Engineer',
+        company: 'Bonitasoft',
+        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly demeanor, Bishal turns complex UI challenges into smooth, beautiful solutions.'
     }
 ]
 
