@@ -19,7 +19,7 @@ const contactItems = [
         id: 3,
         iconName: 'calendar-outline',
         title: 'Birthday',
-        link: '19 September 1985'
+        link: '19 September'
     },
     {
         id: 4,
