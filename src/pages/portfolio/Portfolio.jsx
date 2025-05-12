@@ -9,6 +9,7 @@ import katmandouImage from '../../assets/images/project-2.png';
 import himalayanImage from '../../assets/images/project-3.png';
 import bibiFlixImage from '../../assets/images/project-4.png';
 import adminDashboardImage from '../../assets/images/project-5.png';
+import peugeotCloneImage from '../../assets/images/project-6.gif';
 
 // web design
 import manomaImage from '../../assets/images/UI_Design_01.png';
@@ -46,7 +47,8 @@ const projects = [
   { id: 12, image: bibiPhoqueImage, title: 'Bibi Phoque', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=67-121&t=56A3CCn9lLbXn3St-1' },
   { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
   { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
-  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' }
+  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
+  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', link: 'https://bibi-cars.netlify.app/' }
 ];
 
 const Portfolio = () => {
