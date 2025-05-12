@@ -63,7 +63,7 @@ const testimonials = [
         name: 'Nicolas Chabanoles',
         position: 'CTO',
         company: 'Bonitasoft',
-        text: 'Working with Bishal has been a pleasure; his expertise in crafting clean, intuitive interfaces and his collaborative spirit greatly enhance any development team.'
+        text: 'I hired Bishal several years ago to bring some front-end expertise to the team. Over the years, Bishal has brought his creativity and autonomy to the team to improve the User Experience of our products. Bishal is very easy to work with and is always willing to learn more to help his teammates the best.'
     },
     {
         id: 3,
@@ -71,7 +71,7 @@ const testimonials = [
         name: 'Pablo Alonso',
         position: 'Head of R&D',
         company: 'Bonitasoft',
-        text: 'Bishal brings not only strong technical skills in front-end development but also a positive, cooperative attitude that makes teamwork seamless and enjoyable.'
+        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought real value with his sharp eye for design and user experience. His fresh perspective transformed our product interfaces, making them more modern, intuitive, and impactful. Any team would be lucky to have him onboard.'
     },
     {
         id: 4,
@@ -92,7 +92,7 @@ const testimonials = [
     {
         id: 6,
         image: testimonialAvatar6,
-        name: 'Thomas Buffard',
+        name: 'Thomas Bouffard',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
         text: 'With a strong grasp of modern front-end practices and a humble, team-friendly demeanor, Bishal turns complex UI challenges into smooth, beautiful solutions.'
