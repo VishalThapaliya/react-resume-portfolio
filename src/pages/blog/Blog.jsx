@@ -8,6 +8,7 @@ import typewriterImage from '../../assets/images/widgetTypewriter.gif'
 import clipPathImage from '../../assets/images/widgetClipPath.gif'
 import loginPageImage from '../../assets/images/widgetLoginPage.png'
 import carouselImage from '../../assets/images/image-carousel.gif'
+import infiniteScrollImage from '../../assets/images/infinite-scroll.gif'
 
 const blogs = [
   { id: 1, 
@@ -61,6 +62,15 @@ const blogs = [
     publishedDate: 'May 01, 2025', 
     title: 'Build a Smooth & Performant Image Carousel in React - A Beginner\'s Guide', 
     content: 'If you’re learning React and want to create a clean, responsive, and performant image carousel, you’re in the right place! In this guide, we’ll walk through building a React image carousel with auto-sliding functionality, navigation buttons, and efficient state management.'
+  },
+  { 
+    id: 7, 
+    link: 'https://dev.to/vishalthapaliya/build-an-infinite-scroll-app-in-react-like-a-pro-9je', 
+    image: infiniteScrollImage, 
+    category: 'Frontend, React, Javascript', 
+    publishedDate: 'May 16, 2025', 
+    title: 'Build an Infinite Scroll App in React like a Pro', 
+    content: 'Infinite scrolling is probably one of the most widely used features in today\'s web applications. Rather than relying on traditional pagination, it loads further content dynamically when users scroll. In this tutorial, you will learn how to implement a basic and simple Infinite Scroll component in React JS by fetching GitHub users from the GitHub API.'
   }
 ]
 
