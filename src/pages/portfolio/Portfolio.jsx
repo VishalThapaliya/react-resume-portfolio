@@ -3,11 +3,14 @@ import './Portfolio.css';
 
 // Images
 
+// applications
+import bibiFlixImage from '../../assets/images/project-4.png';
+import infiniteScrollImage from '../../assets/images/infinite-scroll.gif'
+
 // web development
 import jonathanTejasImage from '../../assets/images/project-1.png';
 import katmandouImage from '../../assets/images/project-2.png';
 import himalayanImage from '../../assets/images/project-3.png';
-import bibiFlixImage from '../../assets/images/project-4.png';
 import adminDashboardImage from '../../assets/images/project-5.png';
 import peugeotCloneImage from '../../assets/images/project-6.gif';
 
@@ -27,7 +30,7 @@ import wiseImage from '../../assets/images/UI_Design_10.png';
 const filterList = [
   { id: 'all', option: 'All' },
   { id: 'web-dev', option: 'Web development' },
-  { id: 'web-design', option: 'Web design (UI/UX)' },
+  { id: 'web-design', option: 'Web design (UI)' },
   { id: 'apps', option: 'Application' },
 ];
 
@@ -35,20 +38,21 @@ const filterList = [
 const projects = [
   { id: 1, image: jonathanTejasImage, title: 'Jonathan Tejas', category: 'Web development', link: 'https://portfolio-jonathan-tejas.netlify.app/'},
   { id: 2, image: katmandouImage, title: 'Restaurant Katmandou', category: 'Web development', link: 'https://vishalthapaliya.github.io/restaurant-katmandou/' },
-  { id: 3, image: manomaImage, title: 'Manoma', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=1-15&t=56A3CCn9lLbXn3St-1' },
-  { id: 4, image: artiersImage, title: 'Artiers', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=13-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 5, image: bibilonImage, title: 'Bibilon', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=20-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 3, image: manomaImage, title: 'Manoma', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=1-15&t=56A3CCn9lLbXn3St-1' },
+  { id: 4, image: artiersImage, title: 'Artiers', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=13-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 5, image: bibilonImage, title: 'Bibilon', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=20-2&t=56A3CCn9lLbXn3St-1' },
   { id: 6, image: himalayanImage, title: 'Himalayan Restaurant', category: 'Web development', link: 'https://himalayan.fr/' },
   { id: 7, image: adminDashboardImage, title: 'Task Manager', category: 'Web development', link: 'https://vishalthapaliya.github.io/platform-management-dashboard/' },
   { id: 8, image: bibiFlixImage, title: 'BibiFlix Movies', category: 'Application', link: 'https://bibiflix-react-movie-app.vercel.app/' },
-  { id: 9, image: oculusImage, title: 'Oculus', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=33-34&t=56A3CCn9lLbXn3St-1' },
+  { id: 9, image: oculusImage, title: 'Oculus', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=33-34&t=56A3CCn9lLbXn3St-1' },
   { id: 10, image: bibiProductsImage, title: 'Bibi Products', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=47-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 11, image: bibiFitImage, title: 'Bibifit', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=52-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 12, image: bibiPhoqueImage, title: 'Bibi Phoque', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=67-121&t=56A3CCn9lLbXn3St-1' },
-  { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
-  { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
-  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
-  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', link: 'https://bibi-cars.netlify.app/' }
+  { id: 11, image: bibiFitImage, title: 'Bibifit', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=52-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 12, image: bibiPhoqueImage, title: 'Bibi Phoque', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=67-121&t=56A3CCn9lLbXn3St-1' },
+  { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
+  { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
+  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
+  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', link: 'https://bibi-cars.netlify.app/' },
+  { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', link: 'https://infinite-github-users.netlify.app/' }
 ];
 
 const Portfolio = () => {
