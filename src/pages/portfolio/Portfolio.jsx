@@ -6,6 +6,7 @@ import './Portfolio.css';
 // applications
 import bibiFlixImage from '../../assets/images/project-4.png';
 import infiniteScrollImage from '../../assets/images/infinite-scroll.gif'
+import geminiCloneImage from '../../assets/images/project-gemini-clone.png'
 
 // web development
 import jonathanTejasImage from '../../assets/images/project-1.png';
@@ -52,7 +53,8 @@ const projects = [
   { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
   { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
   { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', link: 'https://bibi-cars.netlify.app/' },
-  { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', link: 'https://infinite-github-users.netlify.app/' }
+  { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', link: 'https://infinite-github-users.netlify.app/' },
+  { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', link: 'https://bibi-gemini-clone.netlify.app/' }
 ];
 
 const Portfolio = () => {
