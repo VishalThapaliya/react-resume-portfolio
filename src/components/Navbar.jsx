@@ -51,7 +51,7 @@ const Navbar = () => {
             <li className="navbar-item">
                 <a 
                     href={resume} 
-                    download={resume}
+                    download="Resume_Bishal_Thapaliya"
                     className='navbar-link resume-download-btn'
                     target='_blank'
                     rel='noopener noreferrer'
