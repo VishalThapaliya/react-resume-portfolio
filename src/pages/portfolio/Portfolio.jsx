@@ -61,11 +61,9 @@ const projects = [
 
 const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState('All');
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleSelect = (category) => {
     setSelectedFilter(category);
-    setDropdownOpen(false);
   };
 
   const filteredProjects =
@@ -73,6 +71,8 @@ const Portfolio = () => {
       ? projects
       : projects.filter((proj) => proj.category === selectedFilter);
 
+  const sortedProjectList = filteredProjects.sort((a, b) => b.id - a.id);
+  
   return (
     <article className="portfolio active" data-page="portfolio">
       <header>
@@ -96,34 +96,9 @@ const Portfolio = () => {
           ))}
         </ul>
 
-        {/* Custom dropdown */}
-        <div className="filter-select-box">
-          <button
-            className={`filter-select ${ dropdownOpen ? 'active' : ''}`}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            <div className="select-value">{selectedFilter}</div>
-            <div className="select-icon">
-              <ion-icon name="chevron-down"></ion-icon>
-            </div>
-          </button>
-
-          {dropdownOpen && (
-            <ul className="select-list">
-              {filterList.map((filter) => (
-                <li className="select-item" key={filter.id}>
-                  <button onClick={() => handleSelect(filter.option)}>
-                    {filter.option}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-
-        {/* Filtered project list */}
+        {/* Sorted project list */}
         <ul className="project-list">
-          {filteredProjects.map((project) => (
+          {sortedProjectList.map((project) => (
             <li className="project-item active" key={project.id}>
               <a href={project.link} target='_blank'>
                 <figure className="project-img">
