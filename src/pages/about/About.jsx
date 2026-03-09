@@ -115,9 +115,10 @@ const About = () => {
 
             <section className="about-text">
                 <p>
-                    I'm Highly skilled Frontend Developer with over 5 years of experience in building responsive, highperformance web applications,
-                    including 2 years specializing in React.js. Passionate about new technologies, best practices, and UI/UX design,
-                    with a detail-oriented, curious, and problem-solving mindset.
+                    I build production-ready React applications with a strong focus on UI quality, performance, and automated testing.
+                    Over 6 years of experience on real-world web applications in international teams.
+                    Experienced in component-driven architecture, REST API integration, and modern UI development. 
+                    Hands-on experience with Cypress, Jest, and React Testing Library to prevent regressions and improve long-term maintainability. 
                 </p>
 
                 <p>
