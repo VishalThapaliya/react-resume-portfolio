@@ -11,18 +11,6 @@ const contactItems = [
     },
     {
         id: 2,
-        iconName: 'phone-portrait-outline',
-        title: 'Phone',
-        link: '(+33) 07 68 31 94 27'
-    },
-    {
-        id: 3,
-        iconName: 'calendar-outline',
-        title: 'Birthday',
-        link: '19 September'
-    },
-    {
-        id: 4,
         iconName: 'location-outline',
         title: 'Location',
         link: 'Grenoble, France'
@@ -57,15 +45,13 @@ const socialItems = [
 const Sidebar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const toggleSideBar = () => {
-        setIsSidebarOpen(prev => !prev);
-    }
+    const toggleSideBar = () => setIsSidebarOpen(prev => !prev);
 
     return (
         <aside className={`sidebar ${isSidebarOpen ? 'active' : ''}`}>
             <div className="sidebar-info">
                 <figure className="avatar-box">
-                    <img src={avatarImage} alt="Bishal Avatar" width={'80px'}/>
+                    <img src={avatarImage} alt="Bishal Avatar" width={80}/>
                 </figure>
 
                 <div className="info-content">
