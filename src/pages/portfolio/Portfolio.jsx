@@ -61,7 +61,7 @@ const projects = [
   { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', categoryId: 'web-dev', link: 'https://bibi-cars.netlify.app/' },
   { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', categoryId: 'apps', link: 'https://infinite-github-users.netlify.app/' },
   { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', categoryId: 'apps', link: 'https://bibi-gemini-clone.netlify.app/' },
-  { id: 19, image: textToUI, title: 'Text-To-UI', category: 'Application', categoryId: 'apps', link: 'https://text-to-ui.netlify.app/' },
+  { id: 19, image: textToUIImage, title: 'Text-To-UI', category: 'Application', categoryId: 'apps', link: 'https://text-to-ui.netlify.app/' },
   { id: 20, image: reacticationsImage, title: 'Reactications', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/' },
   { id: 21, image: productCardImage, title: 'Product Showcase', category: 'Web development', categoryId: 'web-dev', link: 'https://ecommerce-product-card.netlify.app/' },
   { id: 22, image: fileFolderExplorerImage, title: 'File/Folder Explorer', category: 'Web development', categoryId: 'web-dev', link: 'https://react-app-examples.netlify.app/applications/file-folder-explorer' },
@@ -71,7 +71,7 @@ const projects = [
 
 const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const visibleProjects = useMemo(() => {
     const filtered = selectedFilter === 'all'
@@ -84,10 +84,10 @@ const Portfolio = () => {
     setSelectedFilter(category);
   };
 
-  const filteredProjects =
-    selectedFilter === 'all'
-      ? projects.sort((a, b) => a.id - b.id)
-      : projects.filter((proj) => proj.category === selectedFilter);
+  // const filteredProjects =
+  //   selectedFilter === 'all'
+  //     ? projects.sort((a, b) => a.id - b.id)
+  //     : projects.filter((proj) => proj.category === selectedFilter);
   
   return (
     <article className="portfolio active" data-page="portfolio">
