@@ -7,7 +7,10 @@ import './Portfolio.css';
 import bibiFlixImage from '../../assets/images/project-4.png';
 import infiniteScrollImage from '../../assets/images/infinite-scroll.gif'
 import geminiCloneImage from '../../assets/images/project-gemini-clone.png'
-import textToUI from '../../assets/images/text-to-ui.png'
+import textToUIImage from '../../assets/images/text-to-ui.png'
+import reacticationsImage from '../../assets/images/project-reactications.png'
+import avatarGeneratorImage from '../../assets/images/project-avatar-generator.png'
+import gradientGeneratorImage from '../../assets/images/project-gradient-generator.png'
 
 // web development
 import jonathanTejasImage from '../../assets/images/project-1.png';
@@ -15,6 +18,8 @@ import katmandouImage from '../../assets/images/project-2.png';
 import himalayanImage from '../../assets/images/project-3.png';
 import adminDashboardImage from '../../assets/images/project-5.png';
 import peugeotCloneImage from '../../assets/images/project-6.gif';
+import productCardImage from '../../assets/images/project-product-card.png';
+import fileFolderExplorerImage from '../../assets/images/project-file-folder-explorer.png';
 
 // web design
 import manomaImage from '../../assets/images/UI_Design_01.png';
@@ -57,6 +62,11 @@ const projects = [
   { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', categoryId: 'apps', link: 'https://infinite-github-users.netlify.app/' },
   { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', categoryId: 'apps', link: 'https://bibi-gemini-clone.netlify.app/' },
   { id: 19, image: textToUI, title: 'Text-To-UI', category: 'Application', categoryId: 'apps', link: 'https://text-to-ui.netlify.app/' },
+  { id: 20, image: reacticationsImage, title: 'Reactications', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/' },
+  { id: 21, image: productCardImage, title: 'Product Showcase', category: 'Web development', categoryId: 'web-dev', link: 'https://ecommerce-product-card.netlify.app/' },
+  { id: 22, image: fileFolderExplorerImage, title: 'File/Folder Explorer', category: 'Web development', categoryId: 'web-dev', link: 'https://react-app-examples.netlify.app/applications/file-folder-explorer' },
+  { id: 23, image: avatarGeneratorImage, title: 'Random Avatar Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/avatar-generator' },
+  { id: 24, image: gradientGeneratorImage, title: 'Random Gradient Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/gradient-generator' },
 ];
 
 const Portfolio = () => {
@@ -72,14 +82,13 @@ const Portfolio = () => {
 
   const handleSelect = (category) => {
     setSelectedFilter(category);
-    setDropdownOpen(false);
   };
 
   const filteredProjects =
     selectedFilter === 'all'
       ? projects.sort((a, b) => a.id - b.id)
       : projects.filter((proj) => proj.category === selectedFilter);
-
+  
   return (
     <article className="portfolio active" data-page="portfolio">
       <header>
@@ -101,31 +110,6 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-
-        {/* Custom dropdown */}
-        <div className="filter-select-box">
-          <button
-            className={`filter-select ${ dropdownOpen ? 'active' : ''}`}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            <div className="select-value">{selectedFilter}</div>
-            <div className="select-icon">
-              <ion-icon name="chevron-down"></ion-icon>
-            </div>
-          </button>
-
-          {dropdownOpen && (
-            <ul className="select-list">
-              {filterList.map((filter) => (
-                <li className="select-item" key={filter.id}>
-                  <button onClick={() => handleSelect(filter.option)}>
-                    {filter.option}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
 
         {/* Filtered project list */}
         <ul className="project-list">

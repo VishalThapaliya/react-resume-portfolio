@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './About.css'
 
 // services icons
@@ -55,7 +55,14 @@ const testimonials = [
         name: 'Anthony Birembaut',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'Bishal consistently delivers elegant, responsive, and user-centric UI solutions—his attention to detail and commitment to usability make him an outstanding front-end developer.'
+        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. 
+                Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a énormément contribué à 
+                l’amélioration du design et de l’ergonomie de nos applications. Son regard affûté sur l’expérience utilisateur, sa capacité à challenger 
+                les designs existants et son expertise technique ont permis de faire évoluer significativement la qualité de nos produits. 
+                Bishal se distingue également par sa grande capacité d’adaptation. Il apprend rapidement, que ce soit pour monter en compétence sur une 
+                nouvelle technologie ou pour explorer un nouveau domaine fonctionnel. En plus de ses compétences techniques, Bishal a un excellent état 
+                d'esprit : - enthousiaste et enjoué tout en restant toujours professionnel et fiable - curieux, toujours prêt à aider et à trouver des solutions.
+                Je recommande vivement Bishal à toute équipe de développement.`
     },
     {
         id: 2,
@@ -108,9 +115,10 @@ const About = () => {
 
             <section className="about-text">
                 <p>
-                    I'm Highly skilled Frontend Developer with over 5 years of experience in building responsive, highperformance web applications,
-                    including 2 years specializing in React.js. Passionate about new technologies, best practices, and UI/UX design,
-                    with a detail-oriented, curious, and problem-solving mindset.
+                    I build production-ready React applications with a strong focus on UI quality, performance, and automated testing.
+                    Over 6 years of experience on real-world web applications in international teams.
+                    Experienced in component-driven architecture, REST API integration, and modern UI development. 
+                    Hands-on experience with Cypress, Jest, and React Testing Library to prevent regressions and improve long-term maintainability. 
                 </p>
 
                 <p>
