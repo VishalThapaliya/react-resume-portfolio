@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import './Portfolio.css';
 
 // Images
@@ -43,43 +43,51 @@ const filterList = [
 
 // Project Data
 const projects = [
-  { id: 1, image: jonathanTejasImage, title: 'Jonathan Tejas', category: 'Web development', link: 'https://portfolio-jonathan-tejas.netlify.app/'},
-  { id: 2, image: katmandouImage, title: 'Restaurant Katmandou', category: 'Web development', link: 'https://vishalthapaliya.github.io/restaurant-katmandou/' },
-  { id: 3, image: manomaImage, title: 'Manoma', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=1-15&t=56A3CCn9lLbXn3St-1' },
-  { id: 4, image: artiersImage, title: 'Artiers', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=13-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 5, image: bibilonImage, title: 'Bibilon', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=20-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 6, image: himalayanImage, title: 'Himalayan Restaurant', category: 'Web development', link: 'https://himalayan.fr/' },
-  { id: 7, image: adminDashboardImage, title: 'Task Manager', category: 'Web development', link: 'https://vishalthapaliya.github.io/platform-management-dashboard/' },
-  { id: 8, image: bibiFlixImage, title: 'BibiFlix Movies', category: 'Application', link: 'https://bibiflix-react-movie-app.vercel.app/' },
-  { id: 9, image: oculusImage, title: 'Oculus', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=33-34&t=56A3CCn9lLbXn3St-1' },
-  { id: 10, image: bibiProductsImage, title: 'Bibi Products', category: 'Web design (UI/UX)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=47-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 11, image: bibiFitImage, title: 'Bibifit', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=52-2&t=56A3CCn9lLbXn3St-1' },
-  { id: 12, image: bibiPhoqueImage, title: 'Bibi Phoque', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=67-121&t=56A3CCn9lLbXn3St-1' },
-  { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
-  { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
-  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI)', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
-  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', link: 'https://bibi-cars.netlify.app/' },
-  { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', link: 'https://infinite-github-users.netlify.app/' },
-  { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', link: 'https://bibi-gemini-clone.netlify.app/' },
-  { id: 19, image: textToUIImage, title: 'Text-To-UI', category: 'Application', link: 'https://text-to-ui.netlify.app/' },
-  { id: 20, image: reacticationsImage, title: 'Reactications', category: 'Application', link: 'https://react-app-examples.netlify.app/' },
-  { id: 21, image: productCardImage, title: 'Product Showcase', category: 'Web development', link: 'https://ecommerce-product-card.netlify.app/' },
-  { id: 22, image: fileFolderExplorerImage, title: 'File/Folder Explorer', category: 'Web development', link: 'https://react-app-examples.netlify.app/applications/file-folder-explorer' },
-  { id: 23, image: avatarGeneratorImage, title: 'Random Avatar Generator', category: 'Application', link: 'https://react-app-examples.netlify.app/applications/avatar-generator' },
-  { id: 24, image: gradientGeneratorImage, title: 'Random Gradient Generator', category: 'Application', link: 'https://react-app-examples.netlify.app/applications/gradient-generator' },
+  { id: 1, image: jonathanTejasImage, title: 'Jonathan Tejas', category: 'Web development', categoryId: 'web-dev', link: 'https://portfolio-jonathan-tejas.netlify.app/'},
+  { id: 2, image: katmandouImage, title: 'Restaurant Katmandou', category: 'Web development', categoryId: 'web-dev', link: 'https://vishalthapaliya.github.io/restaurant-katmandou/' },
+  { id: 3, image: manomaImage, title: 'Manoma', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=1-15&t=56A3CCn9lLbXn3St-1' },
+  { id: 4, image: artiersImage, title: 'Artiers', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=13-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 5, image: bibilonImage, title: 'Bibilon', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=20-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 6, image: himalayanImage, title: 'Himalayan Restaurant', category: 'Web development', categoryId: 'web-dev', link: 'https://himalayan.fr/' },
+  { id: 7, image: adminDashboardImage, title: 'Task Manager', category: 'Web development', categoryId: 'web-dev', link: 'https://vishalthapaliya.github.io/platform-management-dashboard/' },
+  { id: 8, image: bibiFlixImage, title: 'BibiFlix Movies', category: 'Application', categoryId: 'apps', link: 'https://bibiflix-react-movie-app.vercel.app/' },
+  { id: 9, image: oculusImage, title: 'Oculus', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=33-34&t=56A3CCn9lLbXn3St-1' },
+  { id: 10, image: bibiProductsImage, title: 'Bibi Products', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=47-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 11, image: bibiFitImage, title: 'Bibifit', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=52-2&t=56A3CCn9lLbXn3St-1' },
+  { id: 12, image: bibiPhoqueImage, title: 'Bibi Phoque', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=67-121&t=56A3CCn9lLbXn3St-1' },
+  { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
+  { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
+  { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
+  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', categoryId: 'web-dev', link: 'https://bibi-cars.netlify.app/' },
+  { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', categoryId: 'apps', link: 'https://infinite-github-users.netlify.app/' },
+  { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', categoryId: 'apps', link: 'https://bibi-gemini-clone.netlify.app/' },
+  { id: 19, image: textToUIImage, title: 'Text-To-UI', category: 'Application', categoryId: 'apps', link: 'https://text-to-ui.netlify.app/' },
+  { id: 20, image: reacticationsImage, title: 'Reactications', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/' },
+  { id: 21, image: productCardImage, title: 'Product Showcase', category: 'Web development', categoryId: 'web-dev', link: 'https://ecommerce-product-card.netlify.app/' },
+  { id: 22, image: fileFolderExplorerImage, title: 'File/Folder Explorer', category: 'Web development', categoryId: 'web-dev', link: 'https://react-app-examples.netlify.app/applications/file-folder-explorer' },
+  { id: 23, image: avatarGeneratorImage, title: 'Random Avatar Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/avatar-generator' },
+  { id: 24, image: gradientGeneratorImage, title: 'Random Gradient Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/gradient-generator' },
 ];
 
 const Portfolio = () => {
-  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [selectedFilter, setSelectedFilter] = useState('all');
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const visibleProjects = useMemo(() => {
+    const filtered = selectedFilter === 'all'
+      ? projects
+      : projects.filter((p) => p.categoryId === selectedFilter);
+    return [...filtered].sort((a, b) => b.id - a.id);
+  }, [selectedFilter]);
 
   const handleSelect = (category) => {
     setSelectedFilter(category);
   };
 
-  const filteredProjects =
-    selectedFilter === 'All'
-      ? projects.sort((a, b) => a.id - b.id)
-      : projects.filter((proj) => proj.category === selectedFilter);
+  // const filteredProjects =
+  //   selectedFilter === 'all'
+  //     ? projects.sort((a, b) => a.id - b.id)
+  //     : projects.filter((proj) => proj.category === selectedFilter);
   
   return (
     <article className="portfolio active" data-page="portfolio">
@@ -93,10 +101,9 @@ const Portfolio = () => {
           {filterList.map((filter) => (
             <li className="filter-item" key={filter.id}>
               <button
-                className={`filter-btn ${
-                  selectedFilter === filter.option ? 'active' : ''
-                }`}
-                onClick={() => handleSelect(filter.option)}
+                className={`filter-btn ${selectedFilter === filter.id ? 'active' : ''}`}
+                aria-pressed={selectedFilter === filter.id}
+                onClick={() => handleSelect(filter.id)}
               >
                 {filter.option}
               </button>
@@ -106,14 +113,14 @@ const Portfolio = () => {
 
         {/* Filtered project list */}
         <ul className="project-list">
-          {filteredProjects.sort((a, b) => b.id - a.id).map((project) => (
+          {visibleProjects.map((project) => (
             <li className="project-item active" key={project.id}>
-              <a href={project.link} target='_blank'>
+              <a href={project.link} target='_blank' rel="noopener noreferrer">
                 <figure className="project-img">
-                  <div className="project-item-icon-box">
+                  <div className="project-item-icon-box" aria-hidden="true">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img src={project.image} alt={project.title} loading="lazy" width="400" height="280"/>
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{project.category}</p>
