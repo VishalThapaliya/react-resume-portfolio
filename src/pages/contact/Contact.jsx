@@ -7,18 +7,15 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const isEmailValid = (email) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isEmailValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const isFormValid =
     formData.fullname.trim() &&
@@ -30,27 +27,22 @@ const Contact = () => {
 
     if (!isFormValid) return;
 
-    setIsSubmitting(true);
+    setStatus('submitting');
 
     try {
-      await fetch('https://getform.io/f/bdrnjnjb', {
+      const response = await fetch('https://getform.io/f/bdrnjnjb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       });
 
-      // Clear the form
-      setFormData({
-        fullname: '',
-        email: '',
-        message: '',
-      });
+      if(!response.ok) throw new Error(`Form endpoint returned ${response.status}`);
 
-      alert('Message sent successfully!');
+      // Clear the form
+      setFormData({ fullname: '', email: '', message: '' });
+      setStatus('success');
     } catch (error) {
       console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -67,7 +59,7 @@ const Contact = () => {
             width="400"
             height="300"
             loading="lazy"
-            title="Google Maps - Grenoble"
+            title="Google Maps Location"
           />
         </figure>
       </section>
@@ -75,7 +67,7 @@ const Contact = () => {
       <section className="contact-form">
         <h3 className="h3 form-title">Contact Form</h3>
 
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className="form" noValidate>
           <div className="input-wrapper">
             <input
               type="text"
@@ -84,6 +76,7 @@ const Contact = () => {
               placeholder="Full name"
               value={formData.fullname}
               onChange={handleChange}
+              autoComplete="name"
               required
             />
             <input
@@ -93,6 +86,7 @@ const Contact = () => {
               placeholder="Email address"
               value={formData.email}
               onChange={handleChange}
+              autoComplete="email"
               required
             />
           </div>
@@ -109,11 +103,14 @@ const Contact = () => {
           <button
             className="form-btn"
             type="submit"
-            disabled={!isFormValid || isSubmitting}
+            disabled={!isFormValid || status === "submitting"}
           >
             <ion-icon name="paper-plane"></ion-icon>
-            <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+            <span>{status === "submitting" ? "Sending..." : "Send Message"}</span>
           </button>
+
+          {status === "success" && <p className="form-status success" role="status">Message sent - Thanks, I'll get back to you soon.</p>}
+          {status === "error" && <p className="form-status error" role="alert">Something went wrong. Please try again or email me directly.</p>}
         </form>
       </section>
     </article>

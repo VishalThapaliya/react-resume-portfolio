@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import quoteIcon from '../assets/images/icon-quote.svg'
 import './Testimonials.css'
 
@@ -6,6 +6,7 @@ import './Testimonials.css'
 const Testimonials = ({ testimonials }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedTestimonial, setSelectedTestimonial] = useState(null);
+    const closeBtnRef = useRef(null);
 
     const openModal = (testimonial) => {
         setSelectedTestimonial(testimonial);
@@ -16,6 +17,20 @@ const Testimonials = ({ testimonials }) => {
         setSelectedTestimonial(null);
         setIsModalOpen(false);
     }
+
+    useEffect(() => {
+        if(!selectedTestimonial) return;
+        
+        closeBtnRef.current?.focus();
+        const onKeyDown = (e) => { if (e.key === 'Escape') closeModal(); };
+        document.addEventListener('keydown', onKeyDown);
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            document.body.style.overflow = '';
+        };
+    }, [selectedTestimonial]);
 
     return (
         <>

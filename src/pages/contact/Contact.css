@@ -43,6 +43,21 @@
   }
   
   .form-input::placeholder { font-weight: var(--fw-500); }
+
+  .form-status {
+    font-size: var(--fs-6);
+    font-weight: var(--fw-400);
+
+    &.success {
+      color: var(--white-2);
+    }
+    
+    &.error {
+      color: var(--orange-yellow-crayola);
+    }
+  }
+
+  
   
   .form-input:focus { border-color: var(--orange-yellow-crayola); }
   
