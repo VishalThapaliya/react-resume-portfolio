@@ -1,13 +1,8 @@
 import React from 'react'
 import './About.css'
 
-// services icons
-import designIcon from '../../assets/images/icon-design.svg'
-import devIcon from '../../assets/images/icon-dev.svg'
-import appIcon from '../../assets/images/icon-app.svg'
-import cameraIcon from '../../assets/images/icon-photo.svg'
-
-// testimonial icons
+import Services from '../../components/Services'
+import Testimonials from '../../components/Testimonials'
 import testimonialAvatar1 from '../../assets/images/avatar-1.png'
 import testimonialAvatar2 from '../../assets/images/avatar-2.png'
 import testimonialAvatar3 from '../../assets/images/avatar-3.png'
@@ -15,38 +10,32 @@ import testimonialAvatar4 from '../../assets/images/avatar-5.png'
 import testimonialAvatar5 from '../../assets/images/avatar-6.png'
 import testimonialAvatar6 from '../../assets/images/avatar-4.png'
 
-
-import Services from '../../components/Services'
-import Testimonials from '../../components/Testimonials'
-
-
 const services = [
     {
         id: 1,
-        icon: designIcon,
-        title: 'Web design',
-        description: 'The most modern and high-quality design made at a professional level.'
+        iconName: 'code-slash-outline',
+        title: 'E2E Test Automation',
+        description: 'Designing and maintaining Playwright and Cypress tests for critical user journeys and regression-prone workflows.'
     },
     {
         id: 2,
-        icon: devIcon,
-        title: 'Web development',
-        description: 'High-quality development of sites at the professional level.'
+        iconName: 'checkmark-done-circle-outline',
+        title: 'Functional & Regression Testing',
+        description: 'Validating features through functional, smoke, integration, exploratory, UI, and regression testing.'
     },
     {
         id: 3,
-        icon: appIcon,
-        title: 'Mobile apps',
-        description: 'Professional development of applications for iOS and Android'
+        iconName: 'git-network-outline',
+        title: 'API & Integration Validation',
+        description: 'Checking REST API requests, payloads, HTTP status codes, and frontend/backend synchronization.'
     },
     {
         id: 4,
-        icon: cameraIcon,
-        title: 'Photography',
-        description: 'I make high-quality photos of any category at a professional level.'
+        iconName: 'accessibility-outline',
+        title: 'Accessibility & Cross-browser Quality',
+        description: 'Checking keyboard navigation, semantic HTML, responsive behavior, and compatibility across major browsers.'
     }
 ]
-
 
 const testimonials = [
     {
@@ -55,14 +44,7 @@ const testimonials = [
         name: 'Anthony Birembaut',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. 
-                Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a énormément contribué à 
-                l’amélioration du design et de l’ergonomie de nos applications. Son regard affûté sur l’expérience utilisateur, sa capacité à challenger 
-                les designs existants et son expertise technique ont permis de faire évoluer significativement la qualité de nos produits. 
-                Bishal se distingue également par sa grande capacité d’adaptation. Il apprend rapidement, que ce soit pour monter en compétence sur une 
-                nouvelle technologie ou pour explorer un nouveau domaine fonctionnel. En plus de ses compétences techniques, Bishal a un excellent état 
-                d'esprit : - enthousiaste et enjoué tout en restant toujours professionnel et fiable - curieux, toujours prêt à aider et à trouver des solutions.
-                Je recommande vivement Bishal à toute équipe de développement.`
+        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a largement contribué à la qualité de nos applications, aussi bien par son travail sur l’expérience utilisateur que par son implication dans la validation des fonctionnalités. Son regard affûté, sa capacité à questionner les solutions existantes et son expertise technique sont de vrais atouts pour analyser les comportements d’une application, identifier les risques et renforcer la fiabilité des parcours utilisateurs. Son travail en automatisation des tests, notamment sur les scénarios de bout en bout et de régression, complète naturellement cette approche. Bishal se distingue également par sa grande capacité d’adaptation : il apprend rapidement, explore de nouveaux domaines fonctionnels et cherche toujours des solutions. Enthousiaste, professionnel, fiable et curieux, il est toujours prêt à aider ses collègues. Je recommande vivement Bishal à toute équipe produit ou qualité.`
     },
     {
         id: 2,
@@ -70,7 +52,7 @@ const testimonials = [
         name: 'Nicolas Chabanoles',
         position: 'CTO',
         company: 'Bonitasoft',
-        text: 'I hired Bishal several years ago to bring some front-end expertise to the team. Over the years, Bishal has brought his creativity and autonomy to the team to improve the User Experience of our products. Bishal is very easy to work with and is always willing to learn more to help his teammates the best.'
+        text: 'I hired Bishal several years ago to bring front-end expertise to the team. Over the years, he brought creativity and autonomy to improving the user experience and overall quality of our products. His ability to understand application behavior from the user's perspective also supports his work in quality engineering, from validating key workflows to building and maintaining automated regression tests. He takes ownership of his work, collaborates easily, and is always willing to learn more to support his teammates and the team's goals.'
     },
     {
         id: 3,
@@ -78,7 +60,7 @@ const testimonials = [
         name: 'Pablo Alonso',
         position: 'Head of R&D',
         company: 'Bonitasoft',
-        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought real value with his sharp eye for design and user experience. His fresh perspective transformed our product interfaces, making them more modern, intuitive, and impactful. Any team would be lucky to have him onboard.'
+        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought a sharp eye for design, usability, and product quality. His fresh perspective helped make our product interfaces more modern, intuitive, and impactful. That same attention to detail is valuable in quality engineering: thinking through user journeys, checking edge cases, and helping ensure that features behave as expected. His experience with automated UI and regression testing adds another dimension to his focus on product quality. Any team would be lucky to have him onboard.'
     },
     {
         id: 4,
@@ -86,7 +68,7 @@ const testimonials = [
         name: 'Julien Mege',
         position: 'R&D Manager',
         company: 'Bonitasoft',
-        text: 'Bishal is a rare blend of creative UI craftsmanship and dependable teamwork—his ability to quickly adapt and support others makes him a valuable asset on any project.'
+        text: 'Bishal combines a strong understanding of user-facing products with dependable teamwork. His ability to look at a feature from the user’s perspective, adapt quickly, and support others makes him a valuable contributor to product development and quality. He brings this perspective to QA automation by helping translate expected behavior into practical test scenarios and by focusing on reliable coverage of important user workflows.'
     },
     {
         id: 5,
@@ -94,7 +76,7 @@ const testimonials = [
         name: 'Benjamin Parisel',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'Whether it\'s responsive design or pixel-perfect execution, Bishal excels at building interfaces that look great and feel natural to use.'
+        text: 'Bishal has a great understanding of responsive interfaces and the details that make a product feel natural to use. His attention to how an interface behaves across different browsers, screen sizes, and user interactions is a real asset when assessing product quality. Combined with his QA automation work, including end-to-end checks and regression coverage, this helps him look beyond whether a page simply renders and consider whether the experience works reliably.'
     },
     {
         id: 6,
@@ -102,7 +84,7 @@ const testimonials = [
         name: 'Thomas Bouffard',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly demeanor, Bishal turns complex UI challenges into smooth, beautiful solutions.'
+        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly approach, Bishal is able to understand complex UI challenges and contribute thoughtfully to making applications reliable and easy to use. His move into QA automation builds on that foundation: he can investigate UI issues, reason about frontend and API interactions, and help validate important application flows through automated tests.'
     }
 ]
 
@@ -115,24 +97,51 @@ const About = () => {
 
             <section className="about-text">
                 <p>
-                    I build production-ready React applications with a strong focus on UI quality, performance, and automated testing.
-                    Over 6 years of experience on real-world web applications in international teams.
-                    Experienced in component-driven architecture, REST API integration, and modern UI development. 
-                    Hands-on experience with Cypress, Jest, and React Testing Library to prevent regressions and improve long-term maintainability. 
+                    I’m a QA Engineer with 6+ years of experience in frontend development and quality
+                    engineering within Agile product teams. I began my career building React applications
+                    while writing automated UI tests alongside feature development. This naturally evolved
+                    into a Frontend QA Engineering role focused on test automation, regression testing,
+                    accessibility, API validation, and release quality.
                 </p>
 
                 <p>
-                    Expertise in modern frontend technologies, agile teamwork, and delivering scalable,
-                    userfriendly solutions while continuously striving for improvement.
+                    I design and maintain end-to-end test suites with Playwright and Cypress, create
+                    test scenarios using Cucumber/Gherkin, and validate REST API behavior and
+                    frontend/backend integration. My frontend background helps me investigate issues
+                    across the UI and API layers, understand application behavior, and work closely
+                    with developers to improve product quality.
                 </p>
             </section>
 
-            {/* service section */}
             <Services services={services} />
+            <section className="service" aria-labelledby="quality-approach-title">
+                <h3 className="h3 service-title" id="quality-approach-title">How I Approach Quality</h3>
+                <div className="about-text">
+                    <p>
+                        I build test coverage around critical user journeys and regression-prone
+                        functionality. My scenarios cover filtering, sorting, pagination, CRUD
+                        operations, error handling, and edge cases, using Cucumber/Gherkin,
+                        API mocking, and test fixtures.
+                    </p>
+                    <p>
+                        I validate REST API communication, request payloads, HTTP status codes,
+                        and frontend/backend synchronization. I also check responsive behavior
+                        across Chrome, Firefox, Safari, and Edge, and accessibility through
+                        keyboard navigation and semantic HTML.
+                    </p>
+                    <p>
+                        I report, reproduce, prioritize, and track defects in Jira, and use
+                        AI-assisted tools to help generate test ideas, investigate automation
+                        failures, identify edge cases, and improve test coverage.
+                    </p>
+                </div>
+            </section>
 
-            {/* testimonial section */}
+            <p className="about-text" style={{ marginTop: '24px' }}>
+                The testimonials below are adapted from original colleague feedback to reflect my
+                current QA and product-quality focus; they are not verbatim quotations.
+            </p>
             <Testimonials testimonials={testimonials} />
-
         </article>
     )
 }
