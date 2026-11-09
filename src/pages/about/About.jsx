@@ -2,13 +2,6 @@ import React from 'react'
 import './About.css'
 
 import Services from '../../components/Services'
-import Testimonials from '../../components/Testimonials'
-import testimonialAvatar1 from '../../assets/images/avatar-1.png'
-import testimonialAvatar2 from '../../assets/images/avatar-2.png'
-import testimonialAvatar3 from '../../assets/images/avatar-3.png'
-import testimonialAvatar4 from '../../assets/images/avatar-5.png'
-import testimonialAvatar5 from '../../assets/images/avatar-6.png'
-import testimonialAvatar6 from '../../assets/images/avatar-4.png'
 
 const services = [
     {
@@ -34,64 +27,6 @@ const services = [
         iconName: 'accessibility-outline',
         title: 'Accessibility & Cross-browser Quality',
         description: 'Checking keyboard navigation, semantic HTML, responsive behavior, and compatibility across major browsers.'
-    }
-]
-
-const testimonials = [
-    {
-        id: 1,
-        image: testimonialAvatar1,
-        name: 'Anthony Birembaut',
-        position: 'Senior R&D Engineer',
-        company: 'Bonitasoft',
-        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. 
-                Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a énormément contribué à 
-                l’amélioration du design et de l’ergonomie de nos applications. Son regard affûté sur l’expérience utilisateur, sa capacité à challenger 
-                les designs existants et son expertise technique ont permis de faire évoluer significativement la qualité de nos produits. 
-                Bishal se distingue également par sa grande capacité d’adaptation. Il apprend rapidement, que ce soit pour monter en compétence sur une 
-                nouvelle technologie ou pour explorer un nouveau domaine fonctionnel. En plus de ses compétences techniques, Bishal a un excellent état 
-                d'esprit : - enthousiaste et enjoué tout en restant toujours professionnel et fiable - curieux, toujours prêt à aider et à trouver des solutions.
-                Je recommande vivement Bishal à toute équipe de développement.`
-    },
-    {
-        id: 2,
-        image: testimonialAvatar2,
-        name: 'Nicolas Chabanoles',
-        position: 'CTO',
-        company: 'Bonitasoft',
-        text: 'I hired Bishal several years ago to bring some front-end expertise to the team. Over the years, Bishal has brought his creativity and autonomy to the team to improve the User Experience of our products. Bishal is very easy to work with and is always willing to learn more to help his teammates the best.'
-    },
-    {
-        id: 3,
-        image: testimonialAvatar3,
-        name: 'Pablo Alonso',
-        position: 'Head of R&D',
-        company: 'Bonitasoft',
-        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought real value with his sharp eye for design and user experience. His fresh perspective transformed our product interfaces, making them more modern, intuitive, and impactful. Any team would be lucky to have him onboard.'
-    },
-    {
-        id: 4,
-        image: testimonialAvatar4,
-        name: 'Julien Mege',
-        position: 'R&D Manager',
-        company: 'Bonitasoft',
-        text: 'Bishal is a rare blend of creative UI craftsmanship and dependable teamwork—his ability to quickly adapt and support others makes him a valuable asset on any project.'
-    },
-    {
-        id: 5,
-        image: testimonialAvatar5,
-        name: 'Benjamin Parisel',
-        position: 'Senior R&D Engineer',
-        company: 'Bonitasoft',
-        text: 'Whether it’s responsive design or pixel-perfect execution, Bishal excels at building interfaces that look great and feel natural to use.'
-    },
-    {
-        id: 6,
-        image: testimonialAvatar6,
-        name: 'Thomas Bouffard',
-        position: 'Senior R&D Engineer',
-        company: 'Bonitasoft',
-        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly demeanor, Bishal turns complex UI challenges into smooth, beautiful solutions.'
     }
 ]
 
@@ -121,7 +56,28 @@ const About = () => {
             </section>
 
             <Services services={services} />
-            <Testimonials testimonials={testimonials} />
+            <section className="service" aria-labelledby="quality-approach-title">
+                <h3 className="h3 service-title" id="quality-approach-title">How I Approach Quality</h3>
+                <div className="about-text">
+                    <p>
+                        I build test coverage around critical user journeys and regression-prone
+                        functionality. My scenarios cover filtering, sorting, pagination, CRUD
+                        operations, error handling, and edge cases, using Cucumber/Gherkin,
+                        API mocking, and test fixtures.
+                    </p>
+                    <p>
+                        I validate REST API communication, request payloads, HTTP status codes,
+                        and frontend/backend synchronization. I also check responsive behavior
+                        across Chrome, Firefox, Safari, and Edge, and accessibility through
+                        keyboard navigation and semantic HTML.
+                    </p>
+                    <p>
+                        I report, reproduce, prioritize, and track defects in Jira, and use
+                        AI-assisted tools to help generate test ideas, investigate automation
+                        failures, identify edge cases, and improve test coverage.
+                    </p>
+                </div>
+            </section>
         </article>
     )
 }
