@@ -1,15 +1,15 @@
 import React from 'react'
 import './Services.css'
 
-const Services = ({services}) => {
+const Services = ({ services }) => {
   return (
-    <section className="service">
-            <h3 className="h3 service-title">What I'm doing</h3>
+    <section className="service" aria-labelledby="service-title">
+            <h3 className="h3 service-title" id="service-title">QA & Quality Engineering</h3>
 
             <ul className="service-list">
-                { services.map(service => (
+                {services.map(service => (
                     <li className="service-item" key={service.id}>
-                        <div className="service-icon-box">
+                        <div className="service-icon-box" aria-hidden="true">
                             <img src={service.icon} alt={service.title} width='40' />
                         </div>
 
