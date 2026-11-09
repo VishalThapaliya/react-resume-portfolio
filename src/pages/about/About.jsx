@@ -1,57 +1,40 @@
 import React from 'react'
 import './About.css'
 
-// services icons
-import designIcon from '../../assets/images/icon-design.svg'
-import devIcon from '../../assets/images/icon-dev.svg'
-import appIcon from '../../assets/images/icon-app.svg'
-import cameraIcon from '../../assets/images/icon-photo.svg'
-
-// testimonial icons
-import testimonialAvatar1 from '../../assets/images/avatar-1.png'
-import testimonialAvatar2 from '../../assets/images/avatar-2.png'
-import testimonialAvatar3 from '../../assets/images/avatar-3.png'
-import testimonialAvatar4 from '../../assets/images/avatar-5.png'
-import testimonialAvatar5 from '../../assets/images/avatar-6.png'
-import testimonialAvatar6 from '../../assets/images/avatar-4.png'
-
-
 import Services from '../../components/Services'
 import Testimonials from '../../components/Testimonials'
-
 
 const services = [
     {
         id: 1,
-        icon: designIcon,
-        title: 'Web design',
-        description: 'The most modern and high-quality design made at a professional level.'
+        iconName: 'code-slash-outline',
+        title: 'E2E Test Automation',
+        description: 'Designing and maintaining Playwright and Cypress tests for critical user journeys and regression-prone workflows.'
     },
     {
         id: 2,
-        icon: devIcon,
-        title: 'Web development',
-        description: 'High-quality development of sites at the professional level.'
+        iconName: 'checkmark-done-circle-outline',
+        title: 'Functional & Regression Testing',
+        description: 'Validating features through functional, smoke, integration, exploratory, UI, and regression testing.'
     },
     {
         id: 3,
-        icon: appIcon,
-        title: 'Mobile apps',
-        description: 'Professional development of applications for iOS and Android'
+        iconName: 'git-network-outline',
+        title: 'API & Integration Validation',
+        description: 'Checking REST API requests, payloads, HTTP status codes, and frontend/backend synchronization.'
     },
     {
         id: 4,
-        icon: cameraIcon,
-        title: 'Photography',
-        description: 'I make high-quality photos of any category at a professional level.'
+        iconName: 'accessibility-outline',
+        title: 'Accessibility & Cross-browser Quality',
+        description: 'Checking keyboard navigation, semantic HTML, responsive behavior, and compatibility across major browsers.'
     }
 ]
-
 
 const testimonials = [
     {
         id: 1,
-        image: testimonialAvatar1,
+        image: '/src/assets/images/avatar-1.png',
         name: 'Anthony Birembaut',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
@@ -66,7 +49,7 @@ const testimonials = [
     },
     {
         id: 2,
-        image: testimonialAvatar2,
+        image: '/src/assets/images/avatar-2.png',
         name: 'Nicolas Chabanoles',
         position: 'CTO',
         company: 'Bonitasoft',
@@ -74,7 +57,7 @@ const testimonials = [
     },
     {
         id: 3,
-        image: testimonialAvatar3,
+        image: '/src/assets/images/avatar-3.png',
         name: 'Pablo Alonso',
         position: 'Head of R&D',
         company: 'Bonitasoft',
@@ -82,7 +65,7 @@ const testimonials = [
     },
     {
         id: 4,
-        image: testimonialAvatar4,
+        image: '/src/assets/images/avatar-5.png',
         name: 'Julien Mege',
         position: 'R&D Manager',
         company: 'Bonitasoft',
@@ -90,15 +73,15 @@ const testimonials = [
     },
     {
         id: 5,
-        image: testimonialAvatar5,
+        image: '/src/assets/images/avatar-6.png',
         name: 'Benjamin Parisel',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'Whether it\'s responsive design or pixel-perfect execution, Bishal excels at building interfaces that look great and feel natural to use.'
+        text: 'Whether it’s responsive design or pixel-perfect execution, Bishal excels at building interfaces that look great and feel natural to use.'
     },
     {
         id: 6,
-        image: testimonialAvatar6,
+        image: '/src/assets/images/avatar-4.png',
         name: 'Thomas Bouffard',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
@@ -115,24 +98,24 @@ const About = () => {
 
             <section className="about-text">
                 <p>
-                    I build production-ready React applications with a strong focus on UI quality, performance, and automated testing.
-                    Over 6 years of experience on real-world web applications in international teams.
-                    Experienced in component-driven architecture, REST API integration, and modern UI development. 
-                    Hands-on experience with Cypress, Jest, and React Testing Library to prevent regressions and improve long-term maintainability. 
+                    I’m a QA Engineer with 6+ years of experience in frontend development and quality
+                    engineering within Agile product teams. I began my career building React applications
+                    while writing automated UI tests alongside feature development. This naturally evolved
+                    into a Frontend QA Engineering role focused on test automation, regression testing,
+                    accessibility, API validation, and release quality.
                 </p>
 
                 <p>
-                    Expertise in modern frontend technologies, agile teamwork, and delivering scalable,
-                    userfriendly solutions while continuously striving for improvement.
+                    I design and maintain end-to-end test suites with Playwright and Cypress, create
+                    test scenarios using Cucumber/Gherkin, and validate REST API behavior and
+                    frontend/backend integration. My frontend background helps me investigate issues
+                    across the UI and API layers, understand application behavior, and work closely
+                    with developers to improve product quality.
                 </p>
             </section>
 
-            {/* service section */}
             <Services services={services} />
-
-            {/* testimonial section */}
             <Testimonials testimonials={testimonials} />
-
         </article>
     )
 }
