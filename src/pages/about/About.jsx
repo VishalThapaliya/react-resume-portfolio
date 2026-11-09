@@ -44,7 +44,7 @@ const testimonials = [
         name: 'Anthony Birembaut',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a largement contribué à l’amélioration de la qualité de nos applications, avec une attention particulière portée à l’expérience utilisateur. Son regard affûté, sa capacité à questionner les solutions existantes et son expertise technique ont été de vrais atouts. Bishal se distingue également par sa grande capacité d’adaptation : il apprend rapidement, explore de nouveaux domaines fonctionnels et cherche toujours des solutions. Enthousiaste, professionnel, fiable et curieux, il est toujours prêt à aider ses collègues. Je recommande vivement Bishal à toute équipe produit ou qualité.`
+        text: `J’ai eu la chance de collaborer pendant plusieurs années avec Bishal au sein de la R&D de Bonitasoft. Il connaît très bien la stack web et sait en tirer le meilleur parti. Toujours force de proposition, il a largement contribué à la qualité de nos applications, aussi bien par son travail sur l’expérience utilisateur que par son implication dans la validation des fonctionnalités. Son regard affûté, sa capacité à questionner les solutions existantes et son expertise technique sont de vrais atouts pour analyser les comportements d’une application, identifier les risques et renforcer la fiabilité des parcours utilisateurs. Son travail en automatisation des tests, notamment sur les scénarios de bout en bout et de régression, complète naturellement cette approche. Bishal se distingue également par sa grande capacité d’adaptation : il apprend rapidement, explore de nouveaux domaines fonctionnels et cherche toujours des solutions. Enthousiaste, professionnel, fiable et curieux, il est toujours prêt à aider ses collègues. Je recommande vivement Bishal à toute équipe produit ou qualité.`
     },
     {
         id: 2,
@@ -52,7 +52,7 @@ const testimonials = [
         name: 'Nicolas Chabanoles',
         position: 'CTO',
         company: 'Bonitasoft',
-        text: 'I hired Bishal several years ago to bring front-end expertise to the team. Over the years, he brought creativity and autonomy to improving the user experience and overall quality of our products. He is easy to work with, takes ownership of his work, and is always willing to learn more to support his teammates and the team’s goals.'
+        text: 'I hired Bishal several years ago to bring front-end expertise to the team. Over the years, he brought creativity and autonomy to improving the user experience and overall quality of our products. His ability to understand application behavior from the user's perspective also supports his work in quality engineering, from validating key workflows to building and maintaining automated regression tests. He takes ownership of his work, collaborates easily, and is always willing to learn more to support his teammates and the team's goals.'
     },
     {
         id: 3,
@@ -60,7 +60,7 @@ const testimonials = [
         name: 'Pablo Alonso',
         position: 'Head of R&D',
         company: 'Bonitasoft',
-        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought a sharp eye for design, usability, and product quality. His fresh perspective helped make our product interfaces more modern, intuitive, and impactful. His attention to the user experience is a valuable perspective when assessing how a product works in practice. Any team would be lucky to have him onboard.'
+        text: 'I had the pleasure of working with Bishal at Bonitasoft. Beyond his contagious optimism and great team spirit, he brought a sharp eye for design, usability, and product quality. His fresh perspective helped make our product interfaces more modern, intuitive, and impactful. That same attention to detail is valuable in quality engineering: thinking through user journeys, checking edge cases, and helping ensure that features behave as expected. His experience with automated UI and regression testing adds another dimension to his focus on product quality. Any team would be lucky to have him onboard.'
     },
     {
         id: 4,
@@ -68,7 +68,7 @@ const testimonials = [
         name: 'Julien Mege',
         position: 'R&D Manager',
         company: 'Bonitasoft',
-        text: 'Bishal combines a strong understanding of user-facing products with dependable teamwork. His ability to look at a feature from the user’s perspective, adapt quickly, and support others makes him a valuable contributor to product development and quality.'
+        text: 'Bishal combines a strong understanding of user-facing products with dependable teamwork. His ability to look at a feature from the user’s perspective, adapt quickly, and support others makes him a valuable contributor to product development and quality. He brings this perspective to QA automation by helping translate expected behavior into practical test scenarios and by focusing on reliable coverage of important user workflows.'
     },
     {
         id: 5,
@@ -76,7 +76,7 @@ const testimonials = [
         name: 'Benjamin Parisel',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'Bishal has a great understanding of responsive interfaces and the details that make a product feel natural to use. His attention to how an interface behaves and appears across different situations is a real asset when thinking about user experience and product quality.'
+        text: 'Bishal has a great understanding of responsive interfaces and the details that make a product feel natural to use. His attention to how an interface behaves across different browsers, screen sizes, and user interactions is a real asset when assessing product quality. Combined with his QA automation work, including end-to-end checks and regression coverage, this helps him look beyond whether a page simply renders and consider whether the experience works reliably.'
     },
     {
         id: 6,
@@ -84,7 +84,7 @@ const testimonials = [
         name: 'Thomas Bouffard',
         position: 'Senior R&D Engineer',
         company: 'Bonitasoft',
-        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly approach, Bishal is able to understand complex UI challenges and contribute thoughtfully to making applications reliable and easy to use.'
+        text: 'With a strong grasp of modern front-end practices and a humble, team-friendly approach, Bishal is able to understand complex UI challenges and contribute thoughtfully to making applications reliable and easy to use. His move into QA automation builds on that foundation: he can investigate UI issues, reason about frontend and API interactions, and help validate important application flows through automated tests.'
     }
 ]
 
