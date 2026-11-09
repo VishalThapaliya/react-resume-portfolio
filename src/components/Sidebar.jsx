@@ -60,7 +60,10 @@ const Sidebar = () => {
 
                 <div className="info-content">
                     <h1 className="name" title="Bishal Thapaliya">Bishal Thapaliya</h1>
-                    <p className="title">QA Engineer | Frontend Quality & Test Automation</p>
+                    <p className="title">
+                        <span className="title-center">QA Engineer</span>
+                        <span className="title-center">Frontend Quality & Test Automation</span>
+                    </p>
                 </div>
 
                 <button 

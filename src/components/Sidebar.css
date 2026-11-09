@@ -42,7 +42,7 @@
       .title {
         color: var(--white-1);
         background: var(--onyx);
-        font-size: var(--fs-8);
+        font-size: var(--fs-7);
         font-weight: var(--fw-300);
         width: max-content;
         padding: 3px 12px;
@@ -143,6 +143,10 @@
   color: var(--light-gray);
 }
 
+.title-center {
+  text-align: center;
+  padding-block-start: 5px;
+}
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
