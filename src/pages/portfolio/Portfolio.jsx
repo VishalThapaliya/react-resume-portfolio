@@ -76,9 +76,10 @@ const projects = [
     category: 'Personal QA automation project',
     categoryId: 'qa-testing',
     projectType: 'Personal project',
-    description: 'A browser-automation practice project using a realistic e-commerce demo. The implemented smoke check opens the application and verifies the page title, username field, password field, and login button.',
-    tools: ['Playwright', 'Python', 'pytest-bdd', 'Gherkin', 'GitHub Actions'],
-    scope: ['Login page availability', 'Page title and key form controls', 'BDD scenario structure', 'CI execution with failure tracing'],
+    description: 'A hands-on browser automation project for the SauceDemo e-commerce application. It demonstrates a working BDD flow in which a valid-login scenario is written in Gherkin, executed with pytest-bdd, and automated through Playwright using fixtures and Page Objects.',
+    tools: ['Playwright', 'Python 3.13', 'pytest-bdd', 'Gherkin', 'Page Objects', 'GitHub Actions'],
+    scope: ['Implemented: valid-login BDD scenario', 'Gherkin feature → pytest-bdd step definitions → fixtures → Page Objects → Playwright', 'GitHub Actions workflow triggered on pull requests targeting main', 'Playwright tracing retained on failure and test-results uploaded as workflow artifacts'],
+    nextSteps: ['Extend coverage to product browsing, cart, and checkout workflows', 'Add negative and boundary scenarios']
     link: 'https://www.saucedemo.com/',
     linkLabel: 'Open test application'
   },
@@ -179,10 +180,18 @@ const Portfolio = () => {
                         <ul className="qa-project-tags">
                           {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
                         </ul>
-                        <h4>Testing scope</h4>
+                        <h4>Implemented coverage</h4>
                         <ul className="qa-project-scope">
                           {project.scope.map((item) => <li key={item}>{item}</li>)}
                         </ul>
+                        {project.nextSteps && (
+                          <>
+                            <h4>Potential next steps</h4>
+                            <ul className="qa-project-scope">
+                              {project.nextSteps.map((item) => <li key={item}>{item}</li>)}
+                            </ul>
+                          </>
+                        )}
                       </div>
                       <span className="qa-project-type">{project.projectType}</span>
                     </>
