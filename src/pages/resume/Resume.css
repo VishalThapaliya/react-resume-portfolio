@@ -2,6 +2,16 @@
   margin-bottom: 30px;
 }
 
+.resume-profile {
+  margin-block-end: 20px;
+}
+
+.resume-profile-description {
+  padding-block-start: 10px;
+  color: var(--light-gray);
+  text-align: justify;
+}
+
 /**
  * education and experience 
  */
@@ -65,6 +75,7 @@
 }
 
 .timeline-text {
+  list-style-type: "> ";
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
