@@ -92,7 +92,14 @@ const Blog = () => {
               <li className="blog-post-item" key={blog.id}>
                 <a href={blog.link} target='_blank' rel='noopener noreferrer'>
                   <figure className="blog-banner-box">
-                    <img src={blog.image} alt={blog.title} loading='lazy'/>
+                    <img 
+                      src={blog.image} 
+                      alt={blog.title} 
+                      width='400'
+                      height='280'
+                      loading='lazy' 
+                      decoding='async'
+                    />
                   </figure>
 
                   <div className="blog-content">
