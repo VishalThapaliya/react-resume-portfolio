@@ -120,14 +120,21 @@ const Portfolio = () => {
 
         {/* Filtered project list */}
         <ul className="project-list">
-          {visibleProjects.map((project) => (
+          {visibleProjects.map((project, index) => (
             <li className="project-item active" key={project.id}>
               <a href={project.link} target='_blank' rel="noopener noreferrer">
                 <figure className="project-img">
                   <div className="project-item-icon-box" aria-hidden="true">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" width="400" height="280"/>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    width="400" 
+                    height="280" 
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{project.category}</p>

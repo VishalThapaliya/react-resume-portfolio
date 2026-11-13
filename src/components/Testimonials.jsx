@@ -46,7 +46,14 @@ const Testimonials = ({ testimonials }) => {
                             >
 
                                 <figure className="testimonials-avatar-box">
-                                    <img src={testimonial.image} alt={testimonial.name} width='60' data-testimonials-avatar />
+                                    <img 
+                                        src={testimonial.image} 
+                                        alt={testimonial.name} 
+                                        width='60'
+                                        loading='lazy' 
+                                        decoding='async'
+                                        data-testimonials-avatar 
+                                    />
                                 </figure>
 
                                 <h4 className="h4 testimonials-item-title" data-testimonials-title>{testimonial.name}</h4>
@@ -74,7 +81,12 @@ const Testimonials = ({ testimonials }) => {
 
                             <div className="modal-img-wrapper">
                                 <figure className="modal-avatar-box">
-                                    <img src={selectedTestimonial.image} alt={selectedTestimonial.name} width="80" />
+                                    <img 
+                                        src={selectedTestimonial.image} 
+                                        alt={selectedTestimonial.name} 
+                                        width="80" 
+                                        decoding="async"
+                                    />
                                 </figure>
 
                                 <img src={quoteIcon} alt="quote icon" />

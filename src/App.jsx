@@ -1,19 +1,19 @@
-import { lazy, Suspense, useEffect } from "react"
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
-import './App.css'
+import { lazy, Suspense, useEffect } from "react";
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import './App.css';
 
 // import components
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Footer from './components/Footer'
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 // import pages
-import About from './pages/about/About'
+import About from './pages/about/About';
 
-const Resume = lazy(() => import('./pages/resume/Resume'))
-const Portfolio = lazy(() => import('./pages/portfolio/Portfolio'))
-const Blog = lazy(() => import('./pages/blog/Blog'))
-const Contact = lazy(() => import('./pages/contact/Contact'))
+const Resume = lazy(() => import('./pages/resume/Resume'));
+const Portfolio = lazy(() => import('./pages/portfolio/Portfolio'));
+const Blog = lazy(() => import('./pages/blog/Blog'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
