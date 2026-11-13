@@ -36,6 +36,7 @@ import wiseImage from '../../assets/images/UI_Design_10.png';
 // Filters with unique IDs
 const filterList = [
   { id: 'all', option: 'All' },
+  { id: 'qa-testing', option: 'QA & Software Testing' },
   { id: 'web-dev', option: 'Web development' },
   { id: 'web-design', option: 'Web design (UI)' },
   { id: 'apps', option: 'Application' },
@@ -58,15 +59,21 @@ const projects = [
   { id: 13, image: khaanaImage, title: 'Khaana', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=81-4&t=56A3CCn9lLbXn3St-1' },
   { id: 14, image: bibiGemImage, title: 'Bibi Gem', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=99-22&t=56A3CCn9lLbXn3St-1' },
   { id: 15, image: wiseImage, title: 'Wise', category: 'Web design (UI)', categoryId: 'web-design', link: 'https://www.figma.com/proto/QdobAezB4s7WPoYz94u3hT/UI_Design_Challenges?node-id=114-13&t=56A3CCn9lLbXn3St-1' },
-  { id: 16, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', categoryId: 'web-dev', link: 'https://bibi-cars.netlify.app/' },
+  { id: 16, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-python-bdd', title: 'Playwright with Python – BDD', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-python-bdd' },
   { id: 17, image: infiniteScrollImage, title: 'Infinite Github Users', category: 'Application', categoryId: 'apps', link: 'https://infinite-github-users.netlify.app/' },
   { id: 18, image: geminiCloneImage, title: 'Google Gemini Clone (AI)', category: 'Application', categoryId: 'apps', link: 'https://bibi-gemini-clone.netlify.app/' },
   { id: 19, image: textToUIImage, title: 'Text-To-UI', category: 'Application', categoryId: 'apps', link: 'https://text-to-ui.netlify.app/' },
-  { id: 20, image: reacticationsImage, title: 'Reactications', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/' },
+  { id: 20, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-with-python', title: 'Playwright with Python', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-with-python' },
   { id: 21, image: productCardImage, title: 'Product Showcase', category: 'Web development', categoryId: 'web-dev', link: 'https://ecommerce-product-card.netlify.app/' },
   { id: 22, image: fileFolderExplorerImage, title: 'File/Folder Explorer', category: 'Web development', categoryId: 'web-dev', link: 'https://react-app-examples.netlify.app/applications/file-folder-explorer' },
   { id: 23, image: avatarGeneratorImage, title: 'Random Avatar Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/avatar-generator' },
   { id: 24, image: gradientGeneratorImage, title: 'Random Gradient Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/gradient-generator' },
+  { id: 25, image: 'https://raw.githubusercontent.com/VishalThapaliya/playwright-with-typescript/main/screenshots/Fullpage.png', title: 'Playwright with TypeScript', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-with-typescript' },
+  { id: 26, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/qa-automation-playwright', title: 'SauceDemo E2E Test Suite', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/qa-automation-playwright' },
+  { id: 27, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/qa-automation-python', title: 'SauceDemo Test Suite – Robot Framework', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/qa-automation-python/tree/main/qa-automation-robotframework' },
+  { id: 28, image: peugeotCloneImage, title: 'Peugeot clone', category: 'Web development', categoryId: 'web-dev', link: 'https://bibi-cars.netlify.app/' },
+  { id: 29, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-test-agents', title: 'Playwright Test Agents', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-test-agents' },
+  { id: 30, image: reacticationsImage, title: 'Reactications', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/' },
 ];
 
 const Portfolio = () => {
