@@ -70,41 +70,12 @@ const projects = [
   { id: 24, image: gradientGeneratorImage, title: 'Random Gradient Generator', category: 'Application', categoryId: 'apps', link: 'https://react-app-examples.netlify.app/applications/gradient-generator' },
 
   // QA & Software Testing
-  {
-    id: 25,
-    title: 'SauceDemo UI Automation',
-    category: 'Personal QA automation project',
-    categoryId: 'qa-testing',
-    projectType: 'Personal project',
-    description: 'A hands-on browser automation project for the SauceDemo e-commerce application. It demonstrates a working BDD flow in which a valid-login scenario is written in Gherkin, executed with pytest-bdd, and automated through Playwright using fixtures and Page Objects.',
-    tools: ['Playwright', 'Python 3.13', 'pytest-bdd', 'Gherkin', 'Page Objects', 'GitHub Actions'],
-    scope: ['Implemented: valid-login BDD scenario', 'Gherkin feature → pytest-bdd step definitions → fixtures → Page Objects → Playwright', 'GitHub Actions workflow triggered on pull requests targeting main', 'Playwright tracing retained on failure and test-results uploaded as workflow artifacts'],
-    nextSteps: ['Extend coverage to product browsing, cart, and checkout workflows', 'Add negative and boundary scenarios']
-    link: 'https://www.saucedemo.com/',
-    linkLabel: 'Open test application'
-  },
-  {
-    id: 26,
-    title: 'Enterprise Frontend QA',
-    category: 'Professional QA experience · Bonitasoft',
-    categoryId: 'qa-testing',
-    projectType: 'Professional experience',
-    description: 'Frontend quality engineering for enterprise workflow applications. Focused on reliable user journeys, regression-prone functionality, and the integration between frontend interfaces and REST APIs.',
-    tools: ['Playwright', 'Cypress', 'Cucumber / Gherkin', 'Jest', 'React Testing Library', 'Jira'],
-    scope: ['Functional, smoke, integration, and regression testing', 'Filtering, sorting, pagination, and CRUD workflows', 'API mocking and frontend/API validation', 'Cross-browser and accessibility checks'],
-    linkLabel: 'Professional experience'
-  },
-  {
-    id: 27,
-    title: 'API Testing & Test Design Case Studies',
-    category: 'API and software test design',
-    categoryId: 'qa-testing',
-    projectType: 'Design exercises',
-    description: 'Interview and learning case studies focused on designing testable REST API contracts and identifying expected behavior, validation rules, authorization requirements, and error conditions.',
-    tools: ['REST API design', 'HTTP methods and status codes', 'Test scenarios', 'Boundary and negative testing'],
-    scope: ['Bug Tracking API: create, retrieve, update, and authorization scenarios', 'Input validation and error responses', 'Test Execution Platform: asynchronous test-run submission', 'Background-worker workflow and 202 Accepted response'],
-    linkLabel: 'Test design case study'
-  }
+  { id: 25, image: 'https://raw.githubusercontent.com/VishalThapaliya/playwright-with-typescript/main/screenshots/Fullpage.png', title: 'Playwright with TypeScript', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-with-typescript' },
+  { id: 26, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/qa-automation-playwright', title: 'SauceDemo E2E Test Suite', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/qa-automation-playwright' },
+  { id: 27, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/qa-automation-python', title: 'SauceDemo Test Suite – Robot Framework', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/qa-automation-python/tree/main/qa-automation-robotframework' },
+  { id: 28, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-python-bdd', title: 'Playwright with Python – BDD', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-python-bdd' },
+  { id: 29, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-test-agents', title: 'Playwright Test Agents', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-test-agents' },
+  { id: 30, image: 'https://opengraph.githubassets.com/1/VishalThapaliya/playwright-with-python', title: 'Playwright with Python', category: 'QA & Software Testing', categoryId: 'qa-testing', link: 'https://github.com/VishalThapaliya/playwright-with-python' }
 ];
 
 const Portfolio = () => {
@@ -151,70 +122,20 @@ const Portfolio = () => {
 
         {/* Filtered project list */}
         <ul className="project-list">
-          {visibleProjects.map((project) => {
-            const projectContent = (
-              <>
-                <figure className={`project-img ${project.categoryId === 'qa-testing' ? 'qa-project-img' : ''}`}>
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} loading="lazy" width="400" height="280"/>
-                  ) : (
-                    <div className="qa-project-placeholder" aria-hidden="true">
-                      <ion-icon name={project.id === 25 ? 'bug-outline' : project.id === 26 ? 'shield-checkmark-outline' : 'git-network-outline'}></ion-icon>
-                      <span>QA / TESTING</span>
-                    </div>
-                  )}
-                  {project.link && (
-                    <div className="project-item-icon-box" aria-hidden="true">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                  )}
-                </figure>
-                <div className="project-card-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-category">{project.category}</p>
-                  {project.description && (
-                    <>
-                      <p className="qa-project-description">{project.description}</p>
-                      <div className="qa-project-meta">
-                        <h4>Tools & technologies</h4>
-                        <ul className="qa-project-tags">
-                          {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
-                        </ul>
-                        <h4>Implemented coverage</h4>
-                        <ul className="qa-project-scope">
-                          {project.scope.map((item) => <li key={item}>{item}</li>)}
-                        </ul>
-                        {project.nextSteps && (
-                          <>
-                            <h4>Potential next steps</h4>
-                            <ul className="qa-project-scope">
-                              {project.nextSteps.map((item) => <li key={item}>{item}</li>)}
-                            </ul>
-                          </>
-                        )}
-                      </div>
-                      <span className="qa-project-type">{project.projectType}</span>
-                    </>
-                  )}
-                  {project.linkLabel && <span className="qa-project-link-label">{project.linkLabel}</span>}
-                </div>
-              </>
-            );
-
-            return (
-              <li className={`project-item active ${project.categoryId === 'qa-testing' ? 'qa-project-item' : ''}`} key={project.id}>
-                {project.link ? (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    {projectContent}
-                  </a>
-                ) : (
-                  <div className="qa-project-card">
-                    {projectContent}
+          {visibleProjects.map((project) => (
+            <li className="project-item active" key={project.id}>
+              <a href={project.link} target='_blank' rel="noopener noreferrer">
+                <figure className="project-img">
+                  <div className="project-item-icon-box" aria-hidden="true">
+                    <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                )}
-              </li>
-            );
-          })}
+                  <img src={project.image} alt={project.title} loading="lazy" width="400" height="280"/>
+                </figure>
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-category">{project.category}</p>
+              </a>
+            </li>
+          ))}
         </ul>
       </section>
     </article>
