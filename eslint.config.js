@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', '.features-gen/**'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -30,4 +30,14 @@ export default [
       ],
     },
   },
+  {
+    files: [
+      'playwright.config.js',
+      'tests/**/*.js',
+      'vite.config.js'
+    ],
+    languageOptions: {
+      globals: globals.node
+    }
+  }
 ]
