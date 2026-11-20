@@ -30,4 +30,14 @@ export default [
       ],
     },
   },
+  {
+    files: [
+      'playwright.config.js',
+      'tests/**/*.js',
+      'vite.config.js'
+    ],
+    languageOptions: {
+      globals: globals.node
+    }
+  }
 ]
